@@ -1,0 +1,84 @@
+.movietitle{
+font-size:40px;
+margin-top:2vw;
+color: white
+}
+.movieinfo{
+width: 97vw;
+}
+.rating{
+width: 97vw;
+}
+.poster{
+height:50vw;
+width: 40vw;
+}
+p{
+font-size: 20px;
+}
+@media only screen and (min-width: 725px) and (max-width: 994px){
+.movietitle{
+font-size:40px;
+}
+.movieinfo{
+width: 95vw;
+}
+.poster{
+height:50vw;
+width: 90vw;
+}
+.card-text{
+border-style: solid;
+border-bottom-width: 1px;
+border-left: none;
+border-right:none;
+border-top:none;
+}
+.rating{
+width: 95vw;
+}
+}
+@media only screen and (min-width: 425px) and (max-width: 725px){
+.movietitle{
+font-size:30px;
+}
+.movieinfo{
+width: 95vw;
+}
+.poster{
+height:60vw;
+width: 86vw;
+}
+.card-text{
+border-style: solid;
+border-bottom-width: 1px;
+border-left: none;
+border-right:none;
+border-top:none;
+}
+.rating{
+width: 95vw;
+}
+}
+@media only screen and (min-width: 280px) and (max-width: 425px){
+.movietitle{
+font-size:25px;
+}
+.movieinfo{
+width: 90vw;
+}
+.poster{
+height:90vw;
+width: 80vw;
+}
+.card-text{
+border-style: solid;
+border-bottom-width: 1px;
+border-left: none;
+border-right:none;
+border-top:none;
+}
+.rating{
+width: 90vw;
+}
+}
