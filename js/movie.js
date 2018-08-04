@@ -39,6 +39,8 @@ $(".byyear").click( ()=>{//start of function
   $(".byid").removeClass('color')
   $(".bytitle").removeClass('color')
   })//end of function
+
+
 })
 
 
@@ -99,7 +101,7 @@ let goon = ()=>{
             let tempRow = ""
             let allPeople = data
                  if(data.Title == undefined){//start of if loop
-                  alert("Please Enter Valid information")
+                  alert("Information entered is incorrect.Please Enter Valid information")
                 }//end of if loop
                 else{//start of else loop
                 let tempRow = `<div class ="movieinformation" >
@@ -152,9 +154,15 @@ let goon = ()=>{
                     $(".movieinformation").append(tempRow1); }//end for loop
                   } 
                 },
-                error :(data) =>{
-                  alert("Enter correct information")},
-                   
+                error: (data) => { // in case of error response
+                   alert("some error occured.Please check daa connection.")
+                     },
+                beforeSend: () => { // while request is processing.
+                // you can use loader here.
+                       },
+                complete: () => {// what you want to do while request is completed
+                 
+                 },
                   timeout:3000
                 })
                   }
