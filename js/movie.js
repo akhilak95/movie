@@ -116,6 +116,8 @@ let goon = ()=>{
                             <p class="card-text">${data.Director}</p>
                             <h4 class="card-title">Writer</h4>
                             <p class="card-text">${data.Writer}</p>
+                            <h4 class="card-title">Actors</h4>
+                            <p class="card-text">${data.Actors}</p>
                             <h4 class="card-title">Plot</h4>
                             <p class="card-text">${data.Plot}</p>
                             <h4 class="card-title">Genre</h4>
@@ -131,6 +133,7 @@ let goon = ()=>{
                       </div>
                     </div>
                     <ul class="list-group list-group-flush" style="font-size:20px">
+                     <li class="list-group-item"><span style="font-weight:bold">imdbID: </span>${data.imdbID} </li>
                       <li class="list-group-item"><span style="font-weight:bold">Released: </span>${data.Released} </li>
                       <li class="list-group-item"><span style="font-weight:bold">DVD:</span> ${data.DVD} </li>
                       <li class="list-group-item"><span style="font-weight:bold">Rated:</span> ${data.Rated}</li>
