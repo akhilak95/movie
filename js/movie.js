@@ -116,7 +116,7 @@ let goon = ()=>{
                             <p class="card-text">${data.Director}</p>
                             <h4 class="card-title">Writer</h4>
                             <p class="card-text">${data.Writer}</p>
-                            <h4 class="card-title">Actors</h4>
+                            <h4 class="card-title">Main Cast</h4>
                             <p class="card-text">${data.Actors}</p>
                             <h4 class="card-title">Plot</h4>
                             <p class="card-text">${data.Plot}</p>
@@ -124,15 +124,13 @@ let goon = ()=>{
                             <p class="card-text">${data.Genre}</p>
                             <h4 class="card-title">Type</h4>
                             <p class="card-text">${data.Type}</p>
-                            <h4 class="card-title">Language</h4>
-                            <p class="card-text">${data.Language}</p>
-                            <h4 class="card-title">Country</h4>
-                            <p class="card-text">${data.Country}</p>
                             <h4 class="card-title">Run time</h4>
                             <p class="card-text">${data.Runtime}</p>
                       </div>
                     </div>
                     <ul class="list-group list-group-flush" style="font-size:20px">
+                     <li class="list-group-item"><span style="font-weight:bold">Language: </span>${data.Language} </li>
+                     <li class="list-group-item"><span style="font-weight:bold">Country: </span>${data.Country} </li>
                      <li class="list-group-item"><span style="font-weight:bold">imdbID: </span>${data.imdbID} </li>
                       <li class="list-group-item"><span style="font-weight:bold">Released: </span>${data.Released} </li>
                       <li class="list-group-item"><span style="font-weight:bold">DVD:</span> ${data.DVD} </li>
