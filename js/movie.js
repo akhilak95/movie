@@ -155,7 +155,7 @@ let goon = ()=>{
                   } 
                 },
                 error: (data) => { // in case of error response
-                   alert("some error occured.Please check daa connection.")
+                   alert("some error occured.Please check data connection.")
                      },
                 beforeSend: () => { // while request is processing.
                 // you can use loader here.
