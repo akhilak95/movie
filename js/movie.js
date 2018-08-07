@@ -95,6 +95,7 @@ let goon = ()=>{
       $.ajax({
       type:'GET',
       datatype:'JSON',
+      async:true,
       url:urlmain,
       success: (data) => { // in case of success response
             console.log(data)
