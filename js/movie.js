@@ -39,6 +39,8 @@ $(".byyear").click( ()=>{//start of function
   $(".byid").removeClass('color')
   $(".bytitle").removeClass('color')
   })//end of function
+
+
 })
 
 
@@ -93,13 +95,14 @@ let goon = ()=>{
       $.ajax({
       type:'GET',
       datatype:'JSON',
+      async:true,
       url:urlmain,
       success: (data) => { // in case of success response
             console.log(data)
             let tempRow = ""
             let allPeople = data
                  if(data.Title == undefined){//start of if loop
-                  alert("Please Enter Valid information")
+                  alert("Information entered is incorrect.Please Enter Valid information")
                 }//end of if loop
                 else{//start of else loop
                 let tempRow = `<div class ="movieinformation" >
@@ -114,21 +117,22 @@ let goon = ()=>{
                             <p class="card-text">${data.Director}</p>
                             <h4 class="card-title">Writer</h4>
                             <p class="card-text">${data.Writer}</p>
+                            <h4 class="card-title">Main Cast</h4>
+                            <p class="card-text">${data.Actors}</p>
                             <h4 class="card-title">Plot</h4>
                             <p class="card-text">${data.Plot}</p>
                             <h4 class="card-title">Genre</h4>
                             <p class="card-text">${data.Genre}</p>
                             <h4 class="card-title">Type</h4>
                             <p class="card-text">${data.Type}</p>
-                            <h4 class="card-title">Language</h4>
-                            <p class="card-text">${data.Language}</p>
-                            <h4 class="card-title">Country</h4>
-                            <p class="card-text">${data.Country}</p>
                             <h4 class="card-title">Run time</h4>
                             <p class="card-text">${data.Runtime}</p>
                       </div>
                     </div>
                     <ul class="list-group list-group-flush" style="font-size:20px">
+                     <li class="list-group-item"><span style="font-weight:bold">Language: </span>${data.Language} </li>
+                     <li class="list-group-item"><span style="font-weight:bold">Country: </span>${data.Country} </li>
+                     <li class="list-group-item"><span style="font-weight:bold">imdbID: </span>${data.imdbID} </li>
                       <li class="list-group-item"><span style="font-weight:bold">Released: </span>${data.Released} </li>
                       <li class="list-group-item"><span style="font-weight:bold">DVD:</span> ${data.DVD} </li>
                       <li class="list-group-item"><span style="font-weight:bold">Rated:</span> ${data.Rated}</li>
@@ -152,9 +156,15 @@ let goon = ()=>{
                     $(".movieinformation").append(tempRow1); }//end for loop
                   } 
                 },
-                error :(data) =>{
-                  alert("Enter correct information")},
-                   
+                error: (data) => { // in case of error response
+                   alert("some error occured.Please check data connection.")
+                     },
+                beforeSend: () => { // while request is processing.
+                // you can use loader here.
+                       },
+                complete: () => {// what you want to do while request is completed
+                 
+                 },
                   timeout:3000
                 })
                   }
